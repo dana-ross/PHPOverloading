@@ -62,7 +62,7 @@ In addition, the trait recognizes class names and class hierarchies.
 
 PHP doesn't allow functions or methods to have the same name. That's probably the biggest obstacle to actual method overloading. So you'll need to append the parameter types to each function's name.
 
-For example, if you had two methods named ```example```, one taking a string and one taking an array, you'd name them ```example_string``` and ```example_array```, but when you called then you'd just reference $foo->example() and pass a string or array and *magic* happens.
+For example, if you had two methods named ```example```, one taking a string and one taking an array, you'd name them ```example_string``` and ```example_array```, but when you called then you'd just reference ```$foo->example()``` and pass a string or array and *magic* happens.
 
 ### Constructor overloading
 
