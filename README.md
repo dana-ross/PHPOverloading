@@ -81,6 +81,7 @@ class Foo {
         ...
     }
 }
+```
 
 If you call Foo's constructor and pass an instance of class B, the trait won't find a matching ```__construct_b``` function, so it'll follow the object hierarchy and call ```__construct_a``` instead, passing the instance of B.
 
