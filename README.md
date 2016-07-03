@@ -64,6 +64,28 @@ PHP doesn't allow functions or methods to have the same name. That's probably th
 
 For example, if you had two methods named ```example```, one taking a string and one taking an array, you'd name them ```example_string``` and ```example_array```, but when you called then you'd just reference ```$foo->example()``` and pass a string or array and *magic* happens.
 
+If a method takes more than one parameter, their types are concatenated together in the function name, separated by underscores as in ```example_string_integer_float```. Overloaded methods can take different numbers of parameters.
+
+Constructors are like any other functions. You can have ```__construct_string``` and ```__construct_object``` if you want. But there's also a ```_default``` suffix (i.e. ```__construct_default```) for a default constructor, called when there aren't any parameters passed to the constructor.
+
+### The class hierarchy
+
+Say you have these classes:
+
+```php
+class A {}
+class B extends A{};
+
+class Foo {
+    function __construct_a() {
+        ...
+    }
+}
+
+If you call Foo's constructor and pass an instance of class B, the trait won't find a matching ```__construct_b``` function, so it'll follow the object hierarchy and call ```__construct_a``` instead, passing the instance of B.
+
+If there wasn't a ```__construct_a``` method, it would look for ```__construct_object``` as a fallback.
+
 ### Constructor overloading
 
 ```php
