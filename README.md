@@ -2,7 +2,7 @@
 
 [PHP trait](http://php.net/manual/en/language.oop5.traits.php) providing a form of method overloading in PHP. Useful when porting code from languages which support method overloading, and that's about the only time you should seriously consider using this library.
 
-Seriously, if you're thinking of using it for new PHP code, ask yourself why. There's no reason to add this kind of overhead, not to mention the cognitize load of weird method names, just to overload methods. PHP has gone this long without native method overloading. It can go longer without it.
+Seriously, if you're thinking of using it for new PHP code, ask yourself why. There's no reason to add this kind of overhead, not to mention the cognitive load of weird method names, just to overload methods. PHP has gone this long without native method overloading. It can go longer without it.
 
 Just stop. Think of the children.
 
